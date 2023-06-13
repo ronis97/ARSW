@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<h1>FORM with GET request</h1>
+
+<form action="/hello">
+    <label for="name">First name:</label><br>
+    <input type="text" id="name" name="name" value=""><br>
+    <input type="button" value="Submit" onclick="loadGetMsg()">
+</form>
+<div id="getrespmsg"></div>
+<script>
+    function loadGetMsg(){
+        let nameVar = document.getElementById("name").value;
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            document.getElementById("getrespmsg").innerHTML = this.responseText;
+        }
+        xhttp.open("GET", "/hello?name="+nameVar);
+        xhttp.send()
+    }
+</script>
+
+
+<h1>FORM with POST request</h1>
+<form method="post">
+    <label for="postname">First name:</label><br>
+    <input type="text" id="postname" name="name" value=""><br>
+    <input type="button" value="Submit" onclick="loadPostMsg()">
+</form>
+<div id="postrespmsg"></div>
+<script>
+    function loadPostMsg(){
+        let file = "/helloPost?name="+name.value;
+
+        fetch (file, {method: 'POST'})
+            .then (x => x.text())
+            .then (y => document.getElementById("postrespmsg").innerHTML = y);
+    }
+</script>
+</html>

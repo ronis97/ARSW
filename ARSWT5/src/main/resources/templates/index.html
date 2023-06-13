@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <title>Picas y Famas</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="styles.css" />
+
+</head>
+<body>
+    <div class="form">
+        <h1>Picas y famas</h1>
+        <p>Bienvenido al juego de picas y famas</p>
+        <p>El objetivo del juego es adivinar un número aleatorio generado por la computadora, para ello<br/>
+            te otorgaremos 2 ayudas: las picas y las famas. Las picas te diran si el dígito se encuentra<br/>
+            dentro del número, las famas te dirán si el dígito se encuentra en la misma posición dentro <br/>
+            del número a adivinar
+        </p>
+        <p>Mucha Suerte!!</p>
+        <form th:action="@{/picasyfamas}" th:object="${game}" method="post">
+            <p>Para empezar digita el número de dígitos que deseas que el número tenga</p>
+            <input class="input" name="digits" id="digits" type="text" th:field="*{digits}"/>
+            <input class="buttons" type="submit" value="Submit"/>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

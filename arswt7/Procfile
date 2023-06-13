@@ -1,0 +1,1 @@
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* edu.escuelaing.arsw.websockets.tallerenclase2.BBAppStarter

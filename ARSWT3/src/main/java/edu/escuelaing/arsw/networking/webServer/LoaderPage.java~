@@ -1,0 +1,5 @@
+package edu.escuelaing.arsw.networking.webServer;
+
+public class LoaderPage {
+    
+}

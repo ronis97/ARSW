@@ -1,0 +1,14 @@
+
+mvn archetype:generate -DgroupId=edu.escuelaing.arsw -DartifactId=databaseconnection3 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+
+
+mongodb+srv://ronaldohenao1:970805ERhv@cluster0.5xpoez1.mongodb.net/databasetesting?retryWrites=true&w=majority
+
+
+
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ronis97/arswt8.git
+git push -u origin main

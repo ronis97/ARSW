@@ -1,0 +1,1 @@
+web: java -cp target/classes edu.escuelaing.arsw.networking.webServer.WebServer
